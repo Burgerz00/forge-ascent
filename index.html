@@ -43,20 +43,29 @@ nav {
 .hero {
   text-align: center; padding: 80px 24px 60px;
   background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%);
+  display: flex; flex-direction: column; align-items: center;
+}
+.hero-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 32px;
+  display: block;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  border-radius: 32px;
+  background: #181818;
+  position: relative;
 }
 .hero h1 {
   font-size: clamp(36px, 6vw, 56px); font-weight: 900;
-  line-height: 1.15; letter-spacing: -1px; max-width: 850px; margin: 0 auto 16px; color: var(--gold);
+  line-height: 1.15; letter-spacing: -1px; max-width: 850px; margin: 0 auto 12px; color: var(--gold);
 }
 .hero .sub {
-  font-size: 18px; color: var(--gold); max-width: 650px;
-  margin: 0 auto 32px; font-weight: 500;
+  font-size: 22px; color: #fffbea; max-width: 600px; margin: 0 auto 24px; font-weight: 500;
 }
-.hero p {
-  font-size: 16px; color: #fffbea; max-width: 700px;
-  margin: 0 auto 40px;
+.hero-jingle {
+  font-size: 18px; color: var(--gold); max-width: 520px; margin: 0 auto 36px; font-weight: 600; letter-spacing: 0.5px;
 }
-.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hero-buttons { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
 .btn-primary {
   background: var(--gold); color: var(--black); padding: 16px 32px;
   border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px;
@@ -71,7 +80,7 @@ nav {
   border: 2px solid var(--gold); display: inline-block; transition: background 0.2s, color 0.2s;
 }
 .btn-secondary:hover { background: var(--gold); color: var(--black); }
-.hero-trust { margin-top: 40px; font-size: 14px; color: #fffbea; }
+.hero-trust { margin-top: 36px; font-size: 14px; color: #fffbea; }
 .stats {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px; padding: 48px 24px; text-align: center;
@@ -170,7 +179,7 @@ nav { flex-direction: column; gap: 16px; }
 <body>
 <!-- Nav -->
 <nav>
-<div class="logo">FA<span>.</span></div>
+<div class="logo"><img src="assets/forge-ascent-logo.png" alt="Forge Ascent Logo: Modern stylized climber" style="height:42px;vertical-align:middle;"> Forge Ascent</div>
 <div class="nav-links">
 <a href="#">What We Do</a>
 <a href="#">Results</a>
@@ -180,14 +189,15 @@ nav { flex-direction: column; gap: 16px; }
 </nav>
 <!-- Hero -->
 <section class="hero">
-<h1>Growth systems for contractors & service pros</h1>
-<div class="sub">More five-star reviews. More booked jobs. Less chasing.</div>
-<p>Forge Ascent builds the reputation, visibility, and follow-up systems local service businesses need to dominate their market — and keep their calendars full.</p>
-<div class="hero-buttons">
-<a href="mailto:burgercolin1@gmail.com?subject=Free%20Strategy%20Call" class="btn-primary">Book Your Free Consultation</a>
-<a href="#" class="btn-secondary">See What We Do</a>
-</div>
-<div class="hero-trust">Trusted by 200+ service businesses across the U.S.</div>
+  <img src="assets/forge-ascent-logo.png" alt="Forge Ascent Logo: Modern stylized climber" class="hero-img" />
+  <h1>Customers don't buy technology.<br>They buy a better version of their business.</h1>
+  <div class="sub">Business growth, not just more tech—systems built for outcomes: more customers, more revenue, more time.</div>
+  <div class="hero-jingle">Forge Ascent: Systems for businesses ready to reach the next level.</div>
+  <div class="hero-buttons">
+    <a href="mailto:burgercolin1@gmail.com?subject=Start%20Your%20Ascent" class="btn-primary">Start Your Ascent</a>
+    <a href="#" class="btn-secondary">See How It Works</a>
+  </div>
+  <div class="hero-trust">Trusted by growing businesses ready for what’s next.</div>
 </section>
 <!-- Stats -->
 <section class="stats">
@@ -201,7 +211,7 @@ nav { flex-direction: column; gap: 16px; }
 <section class="section">
 <div class="container">
 <div class="section-label">What We Do</div>
-<h2>Everything you need to grow — one operating partner.</h2>
+<h2>Everything you need to grow—the operating system for modern business.</h2>
 <p style="color:#fffbea; margin-top:12px; max-width:600px;">Four connected systems that work together to fill your pipeline, build your reputation, and close more revenue.</p>
 <div class="services">
 <div class="service-card">
@@ -231,13 +241,13 @@ nav { flex-direction: column; gap: 16px; }
 <section class="section">
 <div class="container">
 <div class="section-label">Why Forge Ascent</div>
-<h2>We're built for how service businesses actually operate.</h2>
+<h2>"Customers don't buy technology. They buy a better version of their business."</h2>
 <p style="color:#fffbea; margin-top:12px; max-width:500px;">No fluff, no vanity dashboards. Just the systems, people, and accountability that move revenue.</p>
 <div class="why-grid">
 <div class="why-item">
 <div class="icon">🔧</div>
-<h3>Built for the Trades</h3>
-<p>We only serve contractors and local service businesses. Every playbook is tested on real job sites, not agency slide decks.</p>
+<h3>Built for Ambitious Businesses</h3>
+<p>We help small and medium businesses across industries create systems for measurable growth—tested, proven, and tailored to your outcomes. Our clients are united by their drive, not by their industry label.</p>
 </div>
 <div class="why-item">
 <div class="icon">⚡</div>
@@ -264,7 +274,7 @@ nav { flex-direction: column; gap: 16px; }
 <section class="section testimonials">
 <div class="container">
 <div class="section-label">Client Results</div>
-<h2>Contractors that scaled with Forge Ascent.</h2>
+<h2>Businesses that scaled with Forge Ascent.</h2>
 <div class="testimonial-grid">
 <div class="testimonial">
 <div class="stars">★★★★★</div>
@@ -288,7 +298,7 @@ nav { flex-direction: column; gap: 16px; }
 <section class="section">
 <div class="container">
 <div class="section-label">Pricing</div>
-<h2>Simple, transparent plans built for growth.</h2>
+<h2>Plans built for business outcomes, not features.</h2>
 <p style="color:#fffbea; margin-top:12px;">$149 one-time setup on every plan. Month-to-month after that. No long-term contracts, cancel anytime.</p>
 <div class="pricing-grid">
 <div class="pricing-card">
@@ -337,7 +347,7 @@ nav { flex-direction: column; gap: 16px; }
 <h2 style="margin:0 auto; text-align:center; color:var(--gold)">Answers before you book.</h2>
 <div class="faq-list">
 <div class="faq-item"><h3>How quickly will I see results?</h3><p>Most clients see new reviews and follow-up automations live within 14 days of onboarding. Ranking and lead-volume improvements typically build over 60-90 days.</p></div>
-<div class="faq-item"><h3>Do you work with my industry?</h3><p>We focus on contractors and local service businesses — roofing, HVAC, plumbing, electrical, remodeling, and similar trades.</p></div>
+<div class="faq-item"><h3>Do you work with my industry?</h3><p>We help ambitious small and medium businesses in a wide range of industries—if you want to grow, we’ll help you build the right systems for it.</p></div>
 <div class="faq-item"><h3>Do I need to sign a long-term contract?</h3><p>No. All plans are month-to-month after a one-time $149 setup. Cancel anytime.</p></div>
 <div class="faq-item"><h3>Will this replace my current team or tools?</h3><p>No — we plug into what you already use. We build the systems and automations around your existing team and tools rather than replacing them.</p></div>
 <div class="faq-item"><h3>How is Forge Ascent different from a typical marketing agency?</h3><p>We're built specifically for the trades, with hands-on strategists (not overseas ticket queues) and transparent, weekly-visible ROI — not vanity dashboards.</p></div>
@@ -357,7 +367,7 @@ Responses within 1 business hour, Mon–Fri.
 </section>
 <!-- Footer -->
 <footer>
-<div class="logo">FA<span>.</span></div>
+<div class="logo"><img src="assets/forge-ascent-logo.png" alt="Forge Ascent Logo: Modern stylized climber" style="height:28px;vertical-align:middle;"> Forge Ascent</div>
 <p>Forge Ascent &middot; © 2026 Forge Ascent. All rights reserved.</p>
 </footer>
 </body>
